@@ -1,10 +1,10 @@
+import { FC } from "react"
 import AnimatedCursor from "react-animated-cursor"
 
 interface CursorProps {
   color: string
 }
-
-export default function Cursor({ color }: CursorProps) {
+const Cursor: FC<CursorProps> = ({ color }) => {
   return (
     <AnimatedCursor
       innerSize={8}
@@ -22,3 +22,5 @@ export default function Cursor({ color }: CursorProps) {
     />
   )
 }
+
+export default Cursor
