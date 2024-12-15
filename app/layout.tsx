@@ -1,16 +1,13 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Bricolage_Grotesque, Oswald } from "next/font/google"
+import { cn } from "clsx"
 import "./globals.css"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
+// Primary Font
+const mainFont = Bricolage_Grotesque({ subsets: ["latin"] })
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
+// Secondary Font
+const oswarldFont = Oswald({ subsets: ["latin"], variable: "--font-oswald" })
 
 export const metadata: Metadata = {
   title: "Nischal Puri | Portfolio",
@@ -24,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={cn(mainFont.className, oswarldFont.variable)}>
         {children}
       </body>
     </html>
