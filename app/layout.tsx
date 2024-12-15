@@ -1,13 +1,20 @@
 import type { Metadata } from "next"
 import { Bricolage_Grotesque, Oswald } from "next/font/google"
-import { cn } from "clsx"
+import localFont from "next/font/local"
 import "./globals.css"
+import { cn } from "@/lib/utils"
 
 // Primary Font
 const mainFont = Bricolage_Grotesque({ subsets: ["latin"] })
 
 // Secondary Font
 const oswarldFont = Oswald({ subsets: ["latin"], variable: "--font-oswald" })
+
+// Accent Font
+const pixelFont = localFont({
+  src: "../public/assets/fonts/pixel-font-7.ttf",
+  variable: "--font-pixel",
+})
 
 export const metadata: Metadata = {
   title: "Nischal Puri | Portfolio",
@@ -21,7 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(mainFont.className, oswarldFont.variable)}>
+      <body
+        className={cn(
+          mainFont.className,
+          oswarldFont.variable,
+          pixelFont.variable
+        )}
+      >
         {children}
       </body>
     </html>

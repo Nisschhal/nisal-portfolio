@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 export default {
   content: [
@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        oswald: ["var(--font-oswald)"],
+        pixel: ["var(--font-pixel)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -15,4 +19,4 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config;
+} satisfies Config
