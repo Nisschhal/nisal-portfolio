@@ -16,7 +16,7 @@ export default {
         grain: "url(/assets/images/background/noisy-background.png)",
       },
       animation: {
-        "noisy-bg": "noise 1s steps(2) infinite",
+        "noisy-bg": "noise 1s steps( 2) infinite",
       },
       keyframes: {
         noise: {
