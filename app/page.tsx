@@ -1,13 +1,14 @@
 "use client"
 import Button from "@/components/ui/button"
 import Card from "@/components/ui/card"
+import FancyButton from "@/components/ui/fancy-button"
 import Input from "@/components/ui/input"
 import Profile from "@/components/ui/profile"
 import TextArea from "@/components/ui/text-area"
 import WaterWaveWrapper from "@/components/visual-effects/water-wave"
 import Image from "next/image"
 import Link from "next/link"
-import { FaUser } from "react-icons/fa"
+import { FaArrowRight, FaUser } from "react-icons/fa"
 import { GoHomeFill } from "react-icons/go"
 export default function Home() {
   return (
@@ -35,6 +36,9 @@ export default function Home() {
             <Input type="text" placeholder="Full name" icon={<FaUser />} />
             <TextArea placeholder="Describe something..." />
             <Profile />
+            <div className="w-[300px]">
+              <FancyButton text="Contact us" icon={<FaArrowRight />} />
+            </div>
           </Card>
         </div>
       )}
