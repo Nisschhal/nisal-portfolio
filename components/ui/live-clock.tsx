@@ -51,7 +51,7 @@ const LiveClock: FC = () => {
     return () => clearInterval(intervalId)
   }, [timeZone]) // Re-run when `timeZone` changes
 
-  // when error
+  // when error set the default time zone
   useEffect(() => {
     if (!error) return
     const updateClock = () => {
@@ -64,9 +64,9 @@ const LiveClock: FC = () => {
   }, [error])
   return (
     <div className="p-10 text-4xl">
-      <p>
-        <>{error ? "Nepal" : <>{timeZone.split("/").pop()}</>} </> - {time}
-      </p>
+      <div className="flex items-center justify-center gap-[.5vw]">
+        <>{error ? "Nepal" : <>{timeZone.split("/").pop()}</>} </>, {time}
+      </div>
     </div>
   )
 }
