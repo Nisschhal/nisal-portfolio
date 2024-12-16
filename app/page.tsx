@@ -2,6 +2,7 @@
 import Button from "@/components/ui/button"
 import Card from "@/components/ui/card"
 import Input from "@/components/ui/input"
+import Profile from "@/components/ui/profile"
 import TextArea from "@/components/ui/text-area"
 import WaterWaveWrapper from "@/components/visual-effects/water-wave"
 import Image from "next/image"
@@ -33,6 +34,7 @@ export default function Home() {
             <Input type="text" placeholder="Full name" />
             <Input type="text" placeholder="Full name" icon={<FaUser />} />
             <TextArea placeholder="Describe something..." />
+            <Profile />
           </Card>
         </div>
       )}
