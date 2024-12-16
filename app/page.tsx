@@ -3,6 +3,7 @@ import Button from "@/components/ui/button"
 import Card from "@/components/ui/card"
 import FancyButton from "@/components/ui/fancy-button"
 import Input from "@/components/ui/input"
+import LiveClock from "@/components/ui/live-clock"
 import Profile from "@/components/ui/profile"
 import TextArea from "@/components/ui/text-area"
 import WaterWaveWrapper from "@/components/visual-effects/water-wave"
@@ -39,6 +40,7 @@ export default function Home() {
             <div className="w-[300px]">
               <FancyButton text="Contact us" icon={<FaArrowRight />} />
             </div>
+            <LiveClock city="Asia/kathmandu" />
           </Card>
         </div>
       )}
