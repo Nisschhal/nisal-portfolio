@@ -1,4 +1,5 @@
 "use client"
+import Button from "@/components/ui/button"
 import Card from "@/components/ui/card"
 import WaterWaveWrapper from "@/components/visual-effects/water-wave"
 import Image from "next/image"
@@ -15,8 +16,10 @@ export default function Home() {
       {() => (
         <div className="h-screen p-20">
           {/* Custom Card: title, classNames, and children */}
-          <Card classNames="text-white max-w-2xl mx-auto" title="Card Title">
-            ...
+          <Card classNames=" max-w-2xl mx-auto" title="Card Title">
+            <div className="grid grid-cols-4">
+              <Button>Basic Button</Button>
+            </div>
           </Card>
         </div>
       )}

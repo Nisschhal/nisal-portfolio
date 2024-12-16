@@ -19,7 +19,7 @@ const Card: FC<CardProps> = ({ title, children, classNames }) => {
         {/* Title */}
         {title ? (
           <div className="font-pixel">
-            <p className="uppercase text-lg text-white">{title}</p>
+            <p className="uppercase text-lg">{title}</p>
           </div>
         ) : null}
         {children}

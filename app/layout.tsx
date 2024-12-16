@@ -37,7 +37,7 @@ export default function RootLayout({
           pixelFont.variable
         )}
       >
-        {/* <GrainEffect /> */}
+        <GrainEffect />
         <Cursor color="#fff" />
         {children}
       </body>
