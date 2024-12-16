@@ -18,7 +18,7 @@ export default function Home() {
         <div className="h-screen p-20">
           {/* Custom Card: title, classNames, and children */}
           <Card classNames=" max-w-2xl mx-auto" title="Card Title">
-            <div className="grid grid-cols-4">
+            <div className="flex gap-4">
               <Button>
                 <GoHomeFill />
                 Basic Button
