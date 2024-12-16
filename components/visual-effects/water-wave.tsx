@@ -1,6 +1,6 @@
 "use client"
 // children need to be client and reac-water-wave use some hook to for effects
-import { Children, FC, ReactNode } from "react"
+import { FC, ReactNode } from "react"
 import WaterWave from "react-water-wave"
 
 interface WaterWaveWrapperProps {
