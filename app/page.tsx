@@ -4,7 +4,8 @@ import Card from "@/components/ui/card"
 import WaterWaveWrapper from "@/components/visual-effects/water-wave"
 import Image from "next/image"
 import Link from "next/link"
-
+import { FaUser } from "react-icons/fa"
+import { GoHomeFill } from "react-icons/go"
 export default function Home() {
   return (
     <WaterWaveWrapper
@@ -18,7 +19,14 @@ export default function Home() {
           {/* Custom Card: title, classNames, and children */}
           <Card classNames=" max-w-2xl mx-auto" title="Card Title">
             <div className="grid grid-cols-4">
-              <Button>Basic Button</Button>
+              <Button>
+                <GoHomeFill />
+                Basic Button
+              </Button>
+              <Button isIcon>
+                <FaUser />
+              </Button>
+              <Button link={"https://www.google.com"}> Google </Button>
             </div>
           </Card>
         </div>
