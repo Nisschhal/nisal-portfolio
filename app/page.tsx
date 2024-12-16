@@ -1,6 +1,8 @@
 "use client"
 import Button from "@/components/ui/button"
 import Card from "@/components/ui/card"
+import Input from "@/components/ui/input"
+import TextArea from "@/components/ui/text-area"
 import WaterWaveWrapper from "@/components/visual-effects/water-wave"
 import Image from "next/image"
 import Link from "next/link"
@@ -28,6 +30,9 @@ export default function Home() {
               </Button>
               <Button link={"https://www.google.com"}> Google </Button>
             </div>
+            <Input type="text" placeholder="Full name" />
+            <Input type="text" placeholder="Full name" icon={<FaUser />} />
+            <TextArea placeholder="Describe something..." />
           </Card>
         </div>
       )}

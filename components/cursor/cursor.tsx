@@ -18,7 +18,7 @@ const Cursor: FC<CursorProps> = ({ color }) => {
       outerStyle={{
         border: `3px solid ${color}`,
       }}
-      clickables={["a", "select", "button", "input", ".link", "textarea"]}
+      clickables={["a", "select", ".button", "input", ".link", "textarea"]}
     />
   )
 }
