@@ -12,3 +12,7 @@ Takeaway from the project.
 => Combining both clsx and tailwind-merge help to create a new cn() function for conditional rendering
 
 - Tailwind config file helps to keep style code clean, rather than defining everything in .css file just define in the config file, but you need to specify all the classNames in the container or div in jsx
+
+- Various libraries such as animated-cursor and water wave and other can be integrated to make a beautifull app
+
+- Creating the reusable UI/Button prehand can save a lot of time

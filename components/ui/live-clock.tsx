@@ -63,7 +63,7 @@ const LiveClock: FC = () => {
     const intervalId = setInterval(updateClock, 1000)
   }, [error])
   return (
-    <div className="p-10 text-4xl">
+    <div className="p-10 text-4xl bg-transparent">
       <div className="flex items-center justify-center gap-[.5vw]">
         <>{error ? "Nepal" : <>{timeZone.split("/").pop()}</>} </>, {time}
       </div>

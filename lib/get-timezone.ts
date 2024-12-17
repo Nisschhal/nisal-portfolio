@@ -11,7 +11,6 @@ export default async function getTimeZone({
     )
     const result = await res.json()
 
-    console.log(result)
     if (result.results) {
       console.log(result.results[0].timezone.name)
       return result.results[0].timezone.name
