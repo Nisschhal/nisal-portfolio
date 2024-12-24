@@ -7,7 +7,28 @@ export default {
     "./sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
   theme: {
+    keyframes: {
+      rotate: {
+        "0%": {
+          transform: "rotate(0deg)",
+        },
+        "100%": {
+          transform: "rotate(360deg)",
+        },
+      },
+    },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "12px",
+        md: "32px",
+      },
+    },
+    animation: {
+      rotating: "rotate 5s linear infinite",
+    },
     extend: {
       fontFamily: {
         oswald: ["var(--font-oswald)"],
