@@ -19,13 +19,13 @@ export default {
         },
       },
     },
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: "12px",
-        md: "32px",
-      },
-    },
+    // container: {
+    //   center: true,
+    //   padding: {
+    //     DEFAULT: "4px",
+    //     md: "8px",
+    //   },
+    // },
     animation: {
       rotating: "rotate 5s linear infinite",
     },

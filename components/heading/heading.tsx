@@ -10,7 +10,7 @@ interface HeadingProps {
 
 const Heading: FC<HeadingProps> = ({ number, title_1, title_2 }) => {
   return (
-    <div className="relative my-10 px-8 z-20">
+    <div className="relative my-10 z-20">
       {/* Number Container */}
       <div className="outline-none flex flex-col justify-start shrink-0 opacity-5 transform -top-32 2xl:-top-24 w-[71px] flex-none h-auto left-4  lg:left-12 absolute whitespace-pre">
         <h2 className="font-pixel text-[180px] text-center text-primary-foreground relative">
