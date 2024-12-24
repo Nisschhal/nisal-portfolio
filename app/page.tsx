@@ -24,11 +24,11 @@ export default function Home() {
       resolution="2048"
     >
       {() => (
-        <>
+        <div className="pb-8">
           {/* Custom Card: title, classNames, and children */}
           <LandingSection />
           <FeaturedSection />
-        </>
+        </div>
       )}
     </WaterWaveWrapper>
   )

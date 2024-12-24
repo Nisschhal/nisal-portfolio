@@ -15,7 +15,7 @@ export default function FeaturedSection() {
         title={MainFeature.title}
         tag={MainFeature.tag}
         video={MainFeature.video}
-        active={false}
+        active={true}
       />
     </div>
   )
