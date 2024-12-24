@@ -9,6 +9,7 @@ import ScrollDown from "@/components/ui/scroll-down"
 import TextArea from "@/components/ui/text-area"
 import MagneticWrapper from "@/components/visual-effects/magnetic-wrapper"
 import WaterWaveWrapper from "@/components/visual-effects/water-wave"
+import LandingSection from "@/sections/landing"
 import Image from "next/image"
 import Link from "next/link"
 import { FaArrowRight, FaUser } from "react-icons/fa"
@@ -22,34 +23,10 @@ export default function Home() {
       resolution="2048"
     >
       {() => (
-        <div className="h-screen p-20">
+        <>
           {/* Custom Card: title, classNames, and children */}
-          <Card classNames=" max-w-2xl mx-auto" title="Card Title">
-            <div className="flex gap-4">
-              <Button>
-                <GoHomeFill />
-                Basic Button
-              </Button>
-              <Button isIcon>
-                <FaUser />
-              </Button>
-              <Button link={"https://www.google.com"}> Google </Button>
-            </div>
-            <Input type="text" placeholder="Full name" />
-            <Input type="text" placeholder="Full name" icon={<FaUser />} />
-            <TextArea placeholder="Describe something..." />
-            <Profile />
-            {/* Moving Button */}
-            <MagneticWrapper className="w-[300px]">
-              <FancyButton text="Contact us" icon={<FaArrowRight />} />
-            </MagneticWrapper>
-            <LiveClock />
-            {/* Moving Arrow */}
-            <MagneticWrapper className="">
-              <ScrollDown />
-            </MagneticWrapper>
-          </Card>
-        </div>
+          <LandingSection />
+        </>
       )}
     </WaterWaveWrapper>
   )

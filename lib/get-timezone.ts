@@ -12,7 +12,6 @@ export default async function getTimeZone({
     const result = await res.json()
 
     if (result.results) {
-      console.log(result.results[0].timezone.name)
       return result.results[0].timezone.name
     } else {
       alert("Allow access location for accurate Time!📍")
