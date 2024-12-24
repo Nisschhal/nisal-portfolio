@@ -67,7 +67,7 @@ const LiveClock: FC = () => {
     <div className="p-10 text-4xl bg-transparent">
       <div className="flex items-center justify-center gap-[.5vw]">
         {/* <>{error ? "Nepal" : <>{timeZone.split("/").pop()}</>} </>, {time} */}
-        <>Nepal: {time}</>
+        <div className="text-gray-300">Nepal: {time}</div>
       </div>
     </div>
   )

@@ -14,7 +14,13 @@ export default function Profile() {
         <div className="w-3 h-3 rounded-full bg-green-benzol border border-blue-cosmos absolute right-0 bottom-5"></div>
       </div>
       {/* Name */}
-      <div className="text-3xl font-medium">NISCHAL PURI</div>
+      <div className="relative">
+        <p className="text-3xl font-medium">NISCHAL PURI</p>
+        <p className="opacity-50 text-sm absolute top-[25px] ">
+          <span className="text-lg font-thin">(</span>Software Essentialists
+          <span className="text-lg font-thin">)</span>
+        </p>
+      </div>
     </div>
   )
 }
