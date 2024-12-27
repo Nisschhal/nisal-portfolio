@@ -56,7 +56,7 @@ export const TimelineItem: FC<TimelineItemProps> = ({
             <p className="leading-6 font-medium text-sm">{title}</p>
           </div>
           {/* Subtitle */}
-          <div className="flex items-center gap-2 w-min">
+          <div className="flex">
             {link ? (
               <Link className="link" href={link} target="_blank">
                 <Body subTitle={subTitle} tag={tag} link={link} />
