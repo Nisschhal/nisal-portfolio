@@ -16,10 +16,22 @@ export default function MeCard() {
         />
         {/* Tags */}
         <div className="absolute top-[65%] space-y-2">
-          <Tag text="Hello, world :)" className="rounded-tl-md   " />
-          <Tag text="I'm Nischal Puri" className="rounded-tl-md  " />
-          <Tag text="Full Stack Developer" className="rounded-tl-md  " />
-          <Tag text="Software Essentialists" className="rounded-tl-md  " />
+          <Tag
+            text="Hello, world :)"
+            className="rounded-tl-md  hover:scale-105 duration-300 "
+          />
+          <Tag
+            text="I'm Nischal Puri"
+            className="rounded-tl-md hover:scale-105 duration-300  "
+          />
+          <Tag
+            text="Full Stack Developer"
+            className="rounded-tl-md hover:scale-105 duration-300  "
+          />
+          <Tag
+            text="Software Essentialists"
+            className="rounded-tl-md hover:scale-105 duration-300  "
+          />
         </div>
       </div>
     </Card>

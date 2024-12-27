@@ -1,4 +1,5 @@
 import MeCard from "@/components/cards/about/me"
+import ResumeCard from "@/components/cards/about/resume"
 import Heading from "@/components/heading/heading"
 import Card from "@/components/ui/card"
 import React from "react"
@@ -12,8 +13,8 @@ export default function AboutSection() {
         <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 2xl:grid-cols-4">
           <MeCard />
           {/* Col 1: Me  || Resume ||Card */}
-          <Card title="Me">Me</Card>
-          <Card title="Resume">Resume</Card>
+
+          <ResumeCard />
           <Card title="Background">Background</Card>
         </div>
         <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 2xl:grid-cols-4">
