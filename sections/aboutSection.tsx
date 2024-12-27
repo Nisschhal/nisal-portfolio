@@ -1,4 +1,5 @@
 import BackgroundCard from "@/components/cards/about/backgroundCard"
+import ExperienceCard from "@/components/cards/about/experience"
 import MeCard from "@/components/cards/about/me"
 import ResumeCard from "@/components/cards/about/resume"
 import Heading from "@/components/heading/heading"
@@ -22,7 +23,7 @@ export default function AboutSection() {
           {/* Certification || Experience || Education */}
           <div className="space-y-4">
             <Card title="Stack">Stack</Card>
-            <Card title="Experience">Experience</Card>
+            <ExperienceCard />
             <Card title="Education">Education</Card>
           </div>
           {/* Gallery */}
