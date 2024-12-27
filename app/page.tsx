@@ -27,7 +27,7 @@ export default function Home() {
       {() => (
         <div className="pb-8">
           {/* Custom Card: title, classNames, and children */}
-          {/* <LandingSection /> */}
+          <LandingSection />
           <FeaturedSection />
           <AboutSection />
         </div>

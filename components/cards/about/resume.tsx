@@ -21,7 +21,7 @@ export default function ResumeCard() {
         <Socials />
         <div className="group duration-300">
           <Button classNames="group-hover:bg-white transition-bg duration-300">
-            <span className="flex gap-2 group-hover:invert transition-all duration-300">
+            <span className="flex gap-2 group-hover:invert transition-all dur">
               <FaDownload />
               Resume
             </span>
