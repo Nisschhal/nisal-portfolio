@@ -1,3 +1,3 @@
 import featuredData from "./featured"
-
-export { featuredData }
+import { galleryImages } from "./gallleryImages"
+export { featuredData, galleryImages }

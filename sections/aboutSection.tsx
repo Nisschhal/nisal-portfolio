@@ -1,3 +1,4 @@
+import MeCard from "@/components/cards/about/me"
 import Heading from "@/components/heading/heading"
 import Card from "@/components/ui/card"
 import React from "react"
@@ -9,12 +10,13 @@ export default function AboutSection() {
       <div className="space-y-4 py-8">
         {/* Personal Info || Resume || Background */}
         <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 2xl:grid-cols-4">
+          <MeCard />
           {/* Col 1: Me  || Resume ||Card */}
-          <div className="space-y-4">
-            <Card title="Me">Me</Card>
-            <Card title="Resume">Resume</Card>
-            <Card title="Background">Background</Card>
-          </div>
+          <Card title="Me">Me</Card>
+          <Card title="Resume">Resume</Card>
+          <Card title="Background">Background</Card>
+        </div>
+        <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 2xl:grid-cols-4">
           {/* Certification || Experience || Education */}
           <div className="space-y-4">
             <Card title="Stack">Stack</Card>
