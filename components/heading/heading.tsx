@@ -25,7 +25,13 @@ const Heading: FC<HeadingProps> = ({ number, title_1, title_2 }) => {
         <p className="text-[17vw] lg:text-[12vw] leading-[100%] text-primary-foreground mr-3">
           {title_1}
         </p>
-        <HeadingAnimatedSvg text={"LEARN MORE ON FEATURED WORKS"} />
+        <HeadingAnimatedSvg
+          text={`${
+            title_1.toLowerCase() == "featured"
+              ? "Highlighting my best work.”".toUpperCase()
+              : "Skills, experience, and growth.".toUpperCase()
+          }`}
+        />
         {/* Title 2: Work (italic)*/}
         <p className="text-[17vw] lg:text-[12vw] leading-[100%] text-primary-foreground mr-3 italic">
           {title_2}

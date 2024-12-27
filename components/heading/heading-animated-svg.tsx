@@ -61,7 +61,7 @@ export const HeadingAnimatedSvg: FC<HeadingAnimatedSvg> = ({
               startOffset={0}
               dominantBaseline="Central"
               style={{
-                fontSize: "14.5px",
+                fontSize: "14px",
                 fontFamily: "Figtree",
                 fontWeight: 600,
                 wordSpacing: "0.1px",
