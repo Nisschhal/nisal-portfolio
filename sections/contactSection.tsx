@@ -3,13 +3,17 @@ import Heading from "@/components/heading/heading"
 import Button from "@/components/ui/button"
 import Card from "@/components/ui/card"
 import Input from "@/components/ui/input"
+import SelectInput from "@/components/ui/select-input"
 import TextArea from "@/components/ui/text-area"
-import React from "react"
+import React, { useState } from "react"
 import { FaPhoneVolume, FaProjectDiagram, FaUser } from "react-icons/fa"
 import { MdEmail, MdSubject } from "react-icons/md"
 import { SiMinutemailer } from "react-icons/si"
 
 export default function ContactSetion() {
+  const [services, setServices] = useState<string[]>([])
+  const [engagement, setEngagement] = useState<string[]>([])
+  const [arrangement, setArrangement] = useState<string[]>([])
   return (
     <div className="pt-24 px-3 lg:px-8">
       <Heading number="03" title_1="Contact" title_2="Me" />
@@ -45,23 +49,63 @@ export default function ContactSetion() {
             </div>
             {/* Multiple Checkboxes */}
             <div className="flex flex-col gap-6">
-              <div>
+              <div className="space-y-4">
                 <h1 className="font-bold text-lg">
-                  What do you want me to do?
+                  What services are you looking for?
                 </h1>
-                <div className="flex flex-wrap items-center justify-between mb-4 gap-8">
+                <div className="flex flex-wrap items-center  mb-4 gap-8">
                   {/* Services */}
+                  {servicesOptions.map((service) => (
+                    <SelectInput
+                      key={service.id}
+                      id={service.id}
+                      type={"checkbox"}
+                      text={service.text}
+                      selectedOptions={services}
+                      setSelectedOptions={setServices}
+                      allowMultiple
+                    />
+                  ))}
                 </div>
               </div>
             </div>
-            {/* Work Type Checkboxes */}
+            {/* Work Engagement Type Checkboxes */}
             <div className="flex flex-col gap-6">
-              <div>
+              <div className="space-y-4">
                 <h1 className="font-bold text-lg">
-                  How do you like me to service you?
+                  What is your preferred work engagement?{" "}
+                </h1>
+                <div className="flex flex-wrap items-center mb-4 gap-8">
+                  {/* Services Option */}
+                  {engagementOptions.map((option) => (
+                    <SelectInput
+                      id={option.id}
+                      type={"radio"}
+                      text={option.text}
+                      selectedOptions={engagement}
+                      setSelectedOptions={setEngagement}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+            {/* Work Arrangement Type Checkboxes */}
+            <div className="flex flex-col gap-6">
+              <div className="space-y-4">
+                <h1 className="font-bold text-lg">
+                  What is your preferred work engagement?{" "}
                 </h1>
                 <div className="flex flex-wrap items-center justify-between mb-4 gap-8">
                   {/* Services Option */}
+                  {arrangementOptions.map((option) => (
+                    <SelectInput
+                      id={option.id}
+                      type={"radio"}
+                      text={option.text}
+                      selectedOptions={arrangement}
+                      setSelectedOptions={setArrangement}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
@@ -82,3 +126,23 @@ export default function ContactSetion() {
     </div>
   )
 }
+
+const servicesOptions = [
+  { id: "Frontend", text: "Frontend 💻" },
+  { id: "Backend", text: "Backend 🔧" },
+  { id: "Fullstack", text: "Fullstack 🌐" },
+  { id: "UI/UX", text: "UI/UX 🎨" },
+  { id: "Teaching", text: "Teaching 👩‍🏫" },
+]
+
+const engagementOptions = [
+  { id: "Full-Time", text: "Full-Time 🕒" },
+  { id: "Part-Time", text: "Part-Time ⏳" },
+  { id: "Freelance", text: "Freelance 💼" },
+]
+
+const arrangementOptions = [
+  { id: "In-Office", text: "In-Office 🏢" },
+  { id: "Remote", text: "Remote 🌍" },
+  { id: "Hybrid", text: "Hybrid 🔄" },
+]
