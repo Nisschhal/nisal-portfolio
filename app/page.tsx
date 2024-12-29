@@ -10,6 +10,7 @@ import TextArea from "@/components/ui/text-area"
 import MagneticWrapper from "@/components/visual-effects/magnetic-wrapper"
 import WaterWaveWrapper from "@/components/visual-effects/water-wave"
 import AboutSection from "@/sections/aboutSection"
+import ContactSetion from "@/sections/contactSection"
 import FeaturedSection from "@/sections/featuredSection"
 import LandingSection from "@/sections/landingPage"
 import Image from "next/image"
@@ -27,9 +28,11 @@ export default function Home() {
       {() => (
         <div className="pb-8">
           {/* Custom Card: title, classNames, and children */}
-          <LandingSection />
+          {/* <LandingSection />
           <FeaturedSection />
-          <AboutSection />
+
+          <AboutSection /> */}
+          <ContactSetion />
         </div>
       )}
     </WaterWaveWrapper>
