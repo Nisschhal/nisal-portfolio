@@ -29,7 +29,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
           <h2 className="font-bold text-2xl">{text}</h2>
         </div>
         {/* Button */}
-        <Button classNames="w-24 ">{btnText}</Button>
+        <Button classNames="!w-24 ">{btnText}</Button>
       </div>
     </div>
   )

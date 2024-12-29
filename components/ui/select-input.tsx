@@ -42,7 +42,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
         id={id}
         checked={selectedOptions.includes(id)}
         onChange={() => handleOptionChange(id)}
-        className="w-4 h-4 rounded-xl bg-transparent"
+        className="w-[15px] h-[15px] rounded-xl bg-transparent"
       />
       <label htmlFor={id}>{text}</label>
     </div>

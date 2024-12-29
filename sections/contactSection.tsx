@@ -22,13 +22,13 @@ export default function ContactSetion() {
         <div className="grid gap-8 grid-cols-1 lg:grid-cols-3 ">
           <div className="flex flex-col gap-8">
             <ContactCard
-              title="Call me at"
+              title="Call Me at"
               icon={<FaPhoneVolume className="fill-[#333] text-lg" />}
               text="+977 - 981 827 5115"
-              btnText="Call me"
+              btnText="Call Now"
             />
             <ContactCard
-              title="Chat with me"
+              title="Chat with Me"
               icon={<MdEmail className="fill-[#333] text-lg" />}
               text="mrnischalpur@gmail.com"
               btnText="Email"
@@ -53,7 +53,7 @@ export default function ContactSetion() {
                 <h1 className="font-bold text-lg">
                   What services are you looking for?
                 </h1>
-                <div className="flex flex-wrap items-center  mb-4 gap-8">
+                <div className="flex flex-wrap items-center md:justify-between  mb-4 gap-8">
                   {/* Services */}
                   {servicesOptions.map((service) => (
                     <SelectInput
@@ -75,7 +75,7 @@ export default function ContactSetion() {
                 <h1 className="font-bold text-lg">
                   What is your preferred work engagement?{" "}
                 </h1>
-                <div className="flex flex-wrap items-center mb-4 gap-8">
+                <div className="flex flex-wrap items-center md:justify-between mb-4 gap-8">
                   {/* Services Option */}
                   {engagementOptions.map((option) => (
                     <SelectInput
@@ -93,9 +93,9 @@ export default function ContactSetion() {
             <div className="flex flex-col gap-6">
               <div className="space-y-4">
                 <h1 className="font-bold text-lg">
-                  What is your preferred work engagement?{" "}
+                  What is your preferred work engagement?
                 </h1>
-                <div className="flex flex-wrap items-center justify-between mb-4 gap-8">
+                <div className="flex flex-wrap items-center md:justify-between mb-4 gap-8">
                   {/* Services Option */}
                   {arrangementOptions.map((option) => (
                     <SelectInput
@@ -111,12 +111,12 @@ export default function ContactSetion() {
             </div>
             {/* Descriptions : Text Area*/}
             <TextArea
-              placeholder={"Tell me about your project"}
+              placeholder={"Tell me more about your project and goals ..."}
               icon={<FaProjectDiagram />}
             />
             {/* Send Button */}
             <div className="w-full flex justify-end">
-              <Button classNames="w-44 py-3">
+              <Button classNames="!w-44 !py-3">
                 Send <SiMinutemailer />
               </Button>
             </div>
