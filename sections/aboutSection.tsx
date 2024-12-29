@@ -3,6 +3,7 @@ import EducationCard from "@/components/cards/about/educationCard"
 import ExperienceCard from "@/components/cards/about/experience"
 import MeCard from "@/components/cards/about/me"
 import ResumeCard from "@/components/cards/about/resume"
+import StackCard from "@/components/cards/about/stackCard"
 import Heading from "@/components/heading/heading"
 import Card from "@/components/ui/card"
 import React from "react"
@@ -23,13 +24,12 @@ export default function AboutSection() {
         <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 2xl:grid-cols-4">
           {/* Certification || Experience || Education */}
           <div className="space-y-4">
-            <Card title="Stack">Stack</Card>
+            <StackCard />
             <ExperienceCard />
             <EducationCard />
           </div>
           {/* Gallery */}
           <div className="space-y-4 2xl:hidden">
-            <Card title="Gallery">Gallery</Card>
             <Card title="Gallery">Gallery</Card>
           </div>
           {/* ECAS: Rotaract || Sof Skills */}
