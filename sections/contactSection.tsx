@@ -5,15 +5,35 @@ import Card from "@/components/ui/card"
 import Input from "@/components/ui/input"
 import SelectInput from "@/components/ui/select-input"
 import TextArea from "@/components/ui/text-area"
-import React, { useState } from "react"
+import React, { FormEvent, useRef, useState } from "react"
 import { FaPhoneVolume, FaProjectDiagram, FaUser } from "react-icons/fa"
 import { MdEmail, MdSubject } from "react-icons/md"
 import { SiMinutemailer } from "react-icons/si"
-
+import emailjs from "@emailjs/browser"
 export default function ContactSetion() {
   const [services, setServices] = useState<string[]>([])
   const [engagement, setEngagement] = useState<string[]>([])
   const [arrangement, setArrangement] = useState<string[]>([])
+
+  const formRef = useRef<HTMLFormElement>(null)
+  const btnRef = useRef<HTMLButtonElement>(null)
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formRef.current!,
+        process.env.NEXT_PUBLIC_EMAILJS_KEY!
+      )
+      .then(
+        (res) => {
+          console.log(res)
+          console.log("Email set successfully!")
+        },
+        (error) => console.log(error)
+      )
+  }
   return (
     <div className="pt-24 px-3 lg:px-8">
       <Heading number="03" title_1="Contact" title_2="Me" />
@@ -35,17 +55,32 @@ export default function ContactSetion() {
             />
           </div>
           {/* Right Side: Span-col-2 */}
-          <div className="lg:col-span-2 bg-secondary-background border border-border rounded-lg space-y-6 relative overflow-hidden py-5 px-[25px] shadow-md">
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="lg:col-span-2 bg-secondary-background border border-border rounded-lg space-y-6 relative overflow-hidden py-5 px-[25px] shadow-md"
+          >
             <div className="flex flex-col lg:flex-row items-center justify-between mb-4 gap-8">
-              <Input type="text" placeholder="Full Name" icon={<FaUser />} />
               <Input
+                name="name"
+                type="text"
+                placeholder="Full Name"
+                icon={<FaUser />}
+              />
+              <Input
+                name="email"
                 type="email"
                 placeholder="Email Address"
                 icon={<MdEmail />}
               />
             </div>
             <div className="flex flex-col lg:flex-row items-center justify-between mb-4 gap-8">
-              <Input type="email" placeholder="Subject" icon={<MdSubject />} />
+              <Input
+                name="subject"
+                type="text"
+                placeholder="Subject"
+                icon={<MdSubject />}
+              />
             </div>
             {/* Multiple Checkboxes */}
             <div className="flex flex-col gap-6">
@@ -111,16 +146,43 @@ export default function ContactSetion() {
             </div>
             {/* Descriptions : Text Area*/}
             <TextArea
+              name="message"
               placeholder={"Tell me more about your project and goals ..."}
               icon={<FaProjectDiagram />}
             />
-            {/* Send Button */}
             <div className="w-full flex justify-end">
-              <Button classNames="!w-44 !py-3">
-                Send <SiMinutemailer />
-              </Button>
+              {/* Send Button */}
+              <div onClick={() => btnRef.current?.click()}>
+                <Button classNames="!w-44 !py-3">
+                  Send <SiMinutemailer />
+                </Button>
+              </div>
+              {/* Hidden form input and submit button */}
+              <div className="hidden">
+                <input
+                  type="text"
+                  name="services"
+                  value={services.join("|")}
+                  hidden
+                />
+                <input
+                  type="text"
+                  name="engagement"
+                  value={engagement}
+                  hidden
+                />
+                <input
+                  type="text"
+                  name="arrangement"
+                  value={arrangement}
+                  hidden
+                />
+              </div>
+              <button type="submit" ref={btnRef} hidden>
+                Send
+              </button>
             </div>
-          </div>
+          </form>
         </div>
       </Card>
     </div>

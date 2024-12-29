@@ -38,6 +38,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
   return (
     <div className="flex items-center gap-2">
       <input
+        name={name}
         type={type}
         id={id}
         checked={selectedOptions.includes(id)}
