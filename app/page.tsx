@@ -32,10 +32,10 @@ export default function Home() {
           <Toaster richColors position="top-center" />
 
           {/* Custom Card: title, classNames, and children */}
-          {/* <LandingSection />
+          <LandingSection />
           <FeaturedSection />
 
-          <AboutSection /> */}
+          <AboutSection />
           <ContactSetion />
         </div>
       )}
