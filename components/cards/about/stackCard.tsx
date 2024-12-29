@@ -20,6 +20,7 @@ export default function StackCard() {
             <div className="flex gap-4">
               {tech.stack.map((t) => (
                 <Tooltip
+                
                   key={t.id}
                   title={t.title}
                   image={t.image}
