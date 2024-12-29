@@ -9,7 +9,7 @@ const TextArea: FC<TextAreaProps> = ({ icon, placeholder }) => {
   return (
     <div className="relative w-full">
       {/* Icon*/}
-      <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+      <div className="absolute top-5 start-0 flex items-center ps-3.5 pointer-events-none">
         {icon}
       </div>
       <textarea
