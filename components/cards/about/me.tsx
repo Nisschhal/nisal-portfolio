@@ -1,7 +1,7 @@
 import Card from "@/components/ui/card"
 import Image from "next/image"
 import React from "react"
-import myImg1 from "@/public/assets/gallery/myImg1.jpg"
+import me7 from "@/public/assets/gallery/me7.jpg"
 import { cn } from "@/lib/utils"
 
 export default function MeCard() {
@@ -10,7 +10,7 @@ export default function MeCard() {
       <div className="w-full h-[400px] sm:h-[500px] overflow-hidden">
         {/* Background Image */}
         <Image
-          src={myImg1}
+          src={me7}
           alt="nischal puri"
           className="absolute top-0 letf-0 bottom-0 right-0 h-full w-full object-cover"
         />

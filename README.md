@@ -3,6 +3,7 @@ Dependencies:
 1. NextJS
 2. TypeScript
 3. TailwindCss
+4. SwiperJs
 
 Takeaway from the project.
 
@@ -16,3 +17,9 @@ Takeaway from the project.
 - Various libraries such as animated-cursor and water wave and other can be integrated to make a beautifull app
 
 - Creating the reusable UI/Button prehand can save a lot of time
+
+## Swiper Implementation:
+
+    1. Download swiper: npm i swiper
+    2. Add swiper CSS style in global.css: swiper, swiper-slide, swiper-pagination, swiper-pagination-bullet, swiper-pagination-bullet-active
+    3. Use docs to implement React Swiper

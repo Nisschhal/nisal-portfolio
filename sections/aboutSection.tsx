@@ -6,6 +6,7 @@ import ResumeCard from "@/components/cards/about/resume"
 import StackCard from "@/components/cards/about/stackCard"
 import Heading from "@/components/heading/heading"
 import Card from "@/components/ui/card"
+import Gallery from "@/components/ui/gallery"
 import React from "react"
 
 export default function AboutSection() {
@@ -15,27 +16,30 @@ export default function AboutSection() {
       <div className="space-y-4 py-8">
         {/* Personal Info || Resume || Background */}
         <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 2xl:grid-cols-4">
-          <MeCard />
-          {/* Col 1: Me  || Resume ||Card */}
-
-          <ResumeCard />
-          <BackgroundCard />
+          <MeCard /> {/* First priority: Personal information and photo */}
+          <ResumeCard /> {/* Second: Resume */}
+          <BackgroundCard /> {/* Third: Background */}
         </div>
+
+        {/* Professional Sections (Experience, Education, and Tech Stack) */}
         <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 2xl:grid-cols-4">
-          {/* Certification || Experience || Education */}
           <div className="space-y-4">
-            <StackCard />
-            <ExperienceCard />
-            <EducationCard />
+            <StackCard /> {/* Fourth: Your tech stack */}
+            <ExperienceCard /> {/* Fifth: Work experience */}
+            <EducationCard /> {/* Sixth: Education */}
           </div>
-          {/* Gallery */}
+
+          {/* Gallery Section (Optional but adds visual appeal) */}
           <div className="space-y-4 2xl:hidden">
-            <Card title="Gallery">Gallery</Card>
+            <Gallery /> {/* Seventh: Visual work or projects */}
           </div>
-          {/* ECAS: Rotaract || Sof Skills */}
+
+          {/* Additional Info (Soft Skills and Rotaract Journey) */}
           <div className="space-y-4 ">
-            <Card title="Soft Skills">Soft Skills</Card>
-            <Card title="Rotaract Journey">Rotaract Journey</Card>
+            <Card title="Soft Skills">Soft Skills</Card>{" "}
+            {/* Eighth: Soft skills */}
+            <Card title="Rotaract Journey">Rotaract Journey</Card>{" "}
+            {/* Ninth: Rotaract journey */}
           </div>
         </div>
       </div>
