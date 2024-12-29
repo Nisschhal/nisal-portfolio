@@ -15,6 +15,7 @@ import {
 import { MdEmail, MdSubject } from "react-icons/md"
 import { SiMinutemailer } from "react-icons/si"
 import emailjs from "@emailjs/browser"
+import { toast } from "sonner"
 export default function ContactSetion() {
   const [services, setServices] = useState<string[]>([])
   const [engagement, setEngagement] = useState<string[]>([])
@@ -22,8 +23,10 @@ export default function ContactSetion() {
 
   const formRef = useRef<HTMLFormElement>(null)
   const btnRef = useRef<HTMLButtonElement>(null)
+  const [loading, setLoading] = useState<boolean>(false)
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setLoading(true)
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_ID!,
@@ -33,10 +36,15 @@ export default function ContactSetion() {
       )
       .then(
         (res) => {
-          console.log(res)
-          console.log("Email set successfully!")
+          if (res.text === "OK") {
+            toast.success("Message Sent! 👌🏻")
+          }
+          setLoading(false)
         },
-        (error) => console.log(error)
+        (error) => {
+          setLoading(false)
+          toast.success("Error Sending Message! 🙈")
+        }
       )
   }
   return (
@@ -163,7 +171,7 @@ export default function ContactSetion() {
               {/* Send Button */}
               <div onClick={() => btnRef.current?.click()}>
                 <Button classNames="!w-44 !py-3">
-                  Send <SiMinutemailer />
+                  {loading ? "Sending..." : "Send"} <SiMinutemailer />
                 </Button>
               </div>
               {/* Hidden form input and submit button to connect to form and button */}
