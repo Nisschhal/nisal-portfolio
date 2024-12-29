@@ -6,7 +6,12 @@ import Input from "@/components/ui/input"
 import SelectInput from "@/components/ui/select-input"
 import TextArea from "@/components/ui/text-area"
 import React, { FormEvent, useRef, useState } from "react"
-import { FaPhoneVolume, FaProjectDiagram, FaUser } from "react-icons/fa"
+import {
+  FaPhoneVolume,
+  FaProjectDiagram,
+  FaUser,
+  FaWhatsapp,
+} from "react-icons/fa"
 import { MdEmail, MdSubject } from "react-icons/md"
 import { SiMinutemailer } from "react-icons/si"
 import emailjs from "@emailjs/browser"
@@ -46,12 +51,14 @@ export default function ContactSetion() {
               icon={<FaPhoneVolume className="fill-[#333] text-lg" />}
               text="+977 - 981 827 5115"
               btnText="Call Now"
+              btnIcon={<FaWhatsapp />}
             />
             <ContactCard
               title="Chat with Me"
               icon={<MdEmail className="fill-[#333] text-lg" />}
               text="mrnischalpur@gmail.com"
               btnText="Email"
+              btnIcon={<SiMinutemailer />}
             />
           </div>
           {/* Right Side: Span-col-2 */}
@@ -114,6 +121,7 @@ export default function ContactSetion() {
                   {/* Services Option */}
                   {engagementOptions.map((option) => (
                     <SelectInput
+                      key={option.id}
                       id={option.id}
                       type={"radio"}
                       text={option.text}
@@ -134,6 +142,7 @@ export default function ContactSetion() {
                   {/* Services Option */}
                   {arrangementOptions.map((option) => (
                     <SelectInput
+                      key={option.id}
                       id={option.id}
                       type={"radio"}
                       text={option.text}
@@ -157,7 +166,7 @@ export default function ContactSetion() {
                   Send <SiMinutemailer />
                 </Button>
               </div>
-              {/* Hidden form input and submit button */}
+              {/* Hidden form input and submit button to connect to form and button */}
               <div className="hidden">
                 <input
                   type="text"
