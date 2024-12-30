@@ -1,4 +1,3 @@
-import { link } from "fs"
 import React from "react"
 import { FaFacebookF } from "react-icons/fa"
 import { LiaLinkedinIn } from "react-icons/lia"

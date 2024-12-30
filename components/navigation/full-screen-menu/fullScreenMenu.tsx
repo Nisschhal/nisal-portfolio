@@ -1,8 +1,6 @@
 import { motion } from "framer-motion"
 import { menuSlide } from "./animation"
 import Curve from "./curve"
-import { useState } from "react"
-import ToggleButton from "./toggleButton"
 
 export default function FullScreenMenu() {
   return (

@@ -4,6 +4,8 @@ import MagneticWrapper from "@/components/visual-effects/magnetic-wrapper"
 import React, { useState } from "react"
 import { FaArrowRight } from "react-icons/fa"
 import ToggleButton from "../full-screen-menu/toggleButton"
+import FullScreenMenu from "../full-screen-menu/fullScreenMenu"
+import { AnimatePresence } from "framer-motion"
 
 export default function Header() {
   const [open, setOpen] = useState<boolean>(false)
@@ -16,6 +18,9 @@ export default function Header() {
         </MagneticWrapper>
       </div>
       <ToggleButton open={open} setOpen={setOpen} />
+      <AnimatePresence mode="wait">
+        {open && <FullScreenMenu />}
+      </AnimatePresence>
     </div>
   )
 }
