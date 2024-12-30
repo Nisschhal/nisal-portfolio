@@ -1,29 +1,30 @@
 import Header from "@/components/navigation/header/header"
-import React from "react"
+import React, { useState } from "react"
 import MagneticWrapper from "@/components/visual-effects/magnetic-wrapper"
 import FancyButton from "@/components/ui/fancy-button"
 
 import { FaArrowRight } from "react-icons/fa"
 import LiveClock from "@/components/ui/live-clock"
 import ScrollDown from "@/components/ui/scroll-down"
+import ToggleButton from "@/components/navigation/full-screen-menu/toggleButton"
+import FullScreenMenu from "@/components/navigation/full-screen-menu/fullScreenMenu"
 
 const LandingSection = () => {
   return (
     <div className="relative h-screen overflow-hidden">
       <Header />
+
       <div className="absolute bottom-36 left-10 z-20 md:hidden">
         <MagneticWrapper>
           <FancyButton text="Let's talk" icon={<FaArrowRight />} />
         </MagneticWrapper>
       </div>
-
       {/* Button for mobile */}
       <div className="md:hidden absolute bottom-36 left-10  ">
         <MagneticWrapper>
           <FancyButton text={"Let's talk"} icon={<FaArrowRight />} />
         </MagneticWrapper>
       </div>
-
       {/* Live Clock */}
       <div className="absolute bottom-0 right-0">
         <LiveClock />
@@ -51,6 +52,9 @@ const LandingSection = () => {
           </div>
         </div>
       </div>
+      {/* Toggle Menu Button  */}
+
+      {/* Menu Animation */}
     </div>
   )
 }

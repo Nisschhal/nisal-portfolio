@@ -9,9 +9,8 @@ export default function Socials() {
   return (
     <div className="flex items-center flex-wrap gap-3 ">
       {socials.map((social, i) => (
-        <div className="group">
+        <div className="group" key={i}>
           <Button
-            key={i}
             link={social.link}
             classNames="group-hover:bg-white transition-bg duration-300"
             isIcon
