@@ -4,6 +4,7 @@ import Curve from "./curve"
 import Profile from "@/components/ui/profile"
 import NavLink from "./navLink"
 import { AnimatePresence } from "framer-motion"
+import Link from "next/link"
 
 export default function FullScreenMenu() {
   return (
@@ -14,13 +15,13 @@ export default function FullScreenMenu() {
       exit="exit"
       className="h-screen w-full bg-black fixed top-0 right-0 text-primary-foreground z-40 font-oswald "
     >
-      {/* Profile  */}
+      {/* -------- Profile -------------  */}
       <div className="relative w-full max-w-[95%] mx-auto">
         <div className="absolute top-8">
           <Profile />
         </div>
       </div>
-      {/* Menu card */}
+      {/* -------- Menu card -------------  */}
       <div className="absolute bottom-32 w-full lg:pl-[5%]">
         <div
           className="grid relative"
@@ -38,6 +39,29 @@ export default function FullScreenMenu() {
         </div>
       </div>
       {/*Curve svg effect*/}
+
+      {/* Footer Link */}
+      <div className="w-full absolute bottom-8">
+        <div className="flex flex-wrap items-center justify-between uppercase text-white">
+          {/* Left Side */}
+          <div className="flex items-center gap-4">
+            <Link href={"/"}>Legal Notice</Link>
+            <Link href={"/"}>404</Link>
+            <Link href={"/"}>LegalStyle</Link>
+          </div>
+          {/* Middle */}
+          <div className="flex items-center gap-4">
+            <Link href={"/"}>LinkedIn</Link>
+            <Link href={"/"}>Facebook</Link>
+            <Link href={"/"}>Instagram</Link>
+          </div>
+          {/* Right Side */}
+          <div className="flex items-center gap-4">
+            <Link href={"/"}>©2024</Link>
+          </div>
+        </div>
+      </div>
+
       <Curve />
     </motion.div>
   )

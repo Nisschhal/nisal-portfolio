@@ -11,10 +11,10 @@ export default function ToggleButton({
   return (
     <button
       onClick={() => setOpen((prev: any) => !prev)}
-      className=" fixed right-4 top-[80%] m-5 z-50 w-16 h-16 rounded-full bg-[#323E56] cursor-pointer "
+      className="fixed right-4 top-[80%] m-5 z-50 w-16 h-16 rounded-full bg-[#323E56] cursor-pointer transform scale-[0.5] hover:scale-100 transition-transform duration-300"
     >
-      <div className="relative flex items-center justify-center">
-        <div className="flex flex-col gap-y-2 w-[30px]  transform transition-all duration-300 origin-center overflow-hidden">
+      <div className="relative flex items-center justify-center ">
+        <div className="flex flex-col gap-y-2 w-[30px] transform transition-all duration-300 origin-center overflow-hidden">
           <div
             className={cn(
               "bg-white h-[2px] w-7 transform transition-all duration-300 origin-left",
