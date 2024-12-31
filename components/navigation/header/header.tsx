@@ -26,10 +26,13 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // GSAP Animation
+  useEffect(() => {}, [])
+
   return (
     <div className="w-full flex items-start justify-center p-8 md:justify-between">
       <Profile />
-      <div className="hidden md:inline">
+      <div className="hidden md:inline  ">
         <MagneticWrapper>
           <FancyButton text={"Let's talk"} icon={<FaArrowRight />} />
         </MagneticWrapper>
