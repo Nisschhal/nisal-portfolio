@@ -9,8 +9,14 @@ import Link from "next/link"
 import { FaArrowRight, FaUser } from "react-icons/fa"
 import { GoHomeFill } from "react-icons/go"
 import { Toaster } from "sonner"
-
+import gsap from "gsap"
+import useGSAPAnimation from "@/lib/animation"
 export default function Home() {
+  const tl = gsap.timeline({
+    defaults: { duration: 0.75, ease: "Power3.easeOut" },
+  })
+
+  // useGSAPAnimation()
   return (
     <WaterWaveWrapper
       imageUrl=""
@@ -23,7 +29,7 @@ export default function Home() {
           <Toaster richColors position="top-center" />
 
           {/* Custom Card: title, classNames, and children */}
-          <LandingSection />
+          <LandingSection tl={tl} />
           <FeaturedSection />
 
           <AboutSection />

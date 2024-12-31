@@ -33,13 +33,13 @@ import gsap from "gsap"
 import Image from "next/image"
 import me15 from "@/public/assets/gallery/me15.jpg"
 
-export default function Profile() {
+export default function Profile({ tl }: { tl: gsap.core.Timeline }) {
   const nameRef = useRef<HTMLParagraphElement>(null) // Ref for the name element
   const imgContainerRef = useRef<HTMLDivElement>(null) // Ref for the image container
   const subtitleRef = useRef<HTMLParagraphElement>(null) // Ref for the swinging text
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { duration: 0.75 } })
+    // const tl = gsap.timeline({ defaults: { duration: 0.75 } })
 
     // Image animation
     if (imgContainerRef.current) {

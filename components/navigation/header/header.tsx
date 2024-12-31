@@ -7,7 +7,7 @@ import ToggleButton from "../full-screen-menu/toggleButton"
 import FullScreenMenu from "../full-screen-menu/fullScreenMenu"
 import { AnimatePresence } from "framer-motion"
 
-export default function Header() {
+export default function Header({ tl }: { tl: gsap.core.Timeline }) {
   const [open, setOpen] = useState<boolean>(false)
   const [showToggle, setShowToggle] = useState<boolean>(false)
 
@@ -31,7 +31,7 @@ export default function Header() {
 
   return (
     <div className="w-full flex items-start justify-center p-8 md:justify-between">
-      <Profile />
+      <Profile tl={tl} />
       <div className="hidden md:inline  ">
         <MagneticWrapper>
           <FancyButton text={"Let's talk"} icon={<FaArrowRight />} />
