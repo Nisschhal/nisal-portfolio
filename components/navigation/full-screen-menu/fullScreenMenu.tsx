@@ -41,7 +41,7 @@ export default function FullScreenMenu() {
       {/*Curve svg effect*/}
 
       {/* Footer Link */}
-      <div className="w-full absolute bottom-8">
+      <div className="w-[95%] pl-[5%] absolute bottom-8">
         <div className="flex flex-wrap items-center justify-between uppercase text-white">
           {/* Left Side */}
           <div className="flex items-center gap-4">

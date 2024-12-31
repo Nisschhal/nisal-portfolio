@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import React from "react"
+import React, { useState } from "react"
 
 export default function ToggleButton({
   open,
@@ -8,10 +8,24 @@ export default function ToggleButton({
   open: boolean
   setOpen: any
 }) {
+  const [clickCount, setClickCount] = useState<number>(0)
+  const clicked = () => {
+    if (clickCount === 0) {
+      setClickCount(1)
+    }
+  }
   return (
     <button
-      onClick={() => setOpen((prev: any) => !prev)}
-      className="fixed right-4 top-[80%] m-5 z-50 w-16 h-16 rounded-full bg-[#323E56] cursor-pointer transform scale-[0.5] hover:scale-100 transition-transform duration-300"
+      onClick={() => {
+        setOpen((prev: any) => !prev)
+        if (clickCount === 0) {
+          setClickCount(1)
+        }
+      }}
+      className={cn(
+        "fixed right-4 top-[40%] m-5 z-50 w-16 h-16 rounded-full bg-[#323E56] cursor-pointer transform scale-[0.5] hover:scale-100 transition-transform duration-300",
+        clickCount === 0 && "animate-pulse"
+      )}
     >
       <div className="relative flex items-center justify-center ">
         <div className="flex flex-col gap-y-2 w-[30px] transform transition-all duration-300 origin-center overflow-hidden">
