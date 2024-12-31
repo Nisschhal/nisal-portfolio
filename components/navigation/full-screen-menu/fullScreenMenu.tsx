@@ -5,6 +5,7 @@ import Profile from "@/components/ui/profile"
 import NavLink from "./navLink"
 import { AnimatePresence } from "framer-motion"
 import Link from "next/link"
+import MenuCard from "./menu-card"
 
 export default function FullScreenMenu() {
   return (
@@ -16,7 +17,7 @@ export default function FullScreenMenu() {
       className="h-screen w-full bg-black fixed top-0 right-0 text-primary-foreground z-40 font-oswald "
     >
       {/* -------- Profile -------------  */}
-      <div className="relative w-full max-w-[95%] mx-auto">
+      <div className="relative w-full pl-[5%]">
         <div className="absolute top-8">
           <Profile />
         </div>
@@ -29,6 +30,7 @@ export default function FullScreenMenu() {
             gridTemplateColumns: "1fr 500px",
           }}
         >
+          {/* Row: 1st: 1fr */}
           <div className="pl-4 flex flex-col justify-end">
             <AnimatePresence>
               {navItems.map((navItem, index) => (
@@ -36,6 +38,10 @@ export default function FullScreenMenu() {
               ))}
             </AnimatePresence>
           </div>
+
+          {/* Row: 2nd: 500px */}
+          {/* Menu About Card */}
+          <MenuCard />
         </div>
       </div>
       {/*Curve svg effect*/}

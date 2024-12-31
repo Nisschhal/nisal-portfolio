@@ -18,7 +18,10 @@ const NavLink: React.FC<NavLinkProps> = ({ item }) => {
       exit="exit"
     >
       <motion.div variants={scale} className="hidden"></motion.div>
-      <Link href={href} className="text-[6vw] uppercase leading-[96%]">
+      <Link
+        href={href}
+        className="text-[6vw] uppercase leading-[96%] hover:scale-110 duration-300"
+      >
         {title}
       </Link>
     </motion.div>

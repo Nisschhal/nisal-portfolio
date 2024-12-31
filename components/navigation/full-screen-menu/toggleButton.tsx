@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 export default function ToggleButton({
   open,
@@ -14,6 +14,7 @@ export default function ToggleButton({
       setClickCount(1)
     }
   }
+
   return (
     <button
       onClick={() => {
@@ -23,7 +24,7 @@ export default function ToggleButton({
         }
       }}
       className={cn(
-        "fixed right-4 top-[40%] m-5 z-50 w-16 h-16 rounded-full bg-[#323E56] cursor-pointer transform scale-[0.5] hover:scale-100 transition-transform duration-300",
+        "fixed right-4  m-5 z-50 w-16 h-16 rounded-full bg-[#323E56] cursor-pointer transform scale-[0.5]  hover:scale-100 transition-transform duration-300",
         clickCount === 0 && "animate-pulse"
       )}
     >
