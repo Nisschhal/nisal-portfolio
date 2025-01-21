@@ -14,9 +14,12 @@ export default function Socials() {
             classNames="group-hover:bg-white transition-bg duration-300"
             isIcon
           >
-            <span className="w-7 h-7 group-hover:invert group-hover:scale-110 transition-all duration-300 grid place-items-center">
+            {/* <span className="w-7 h-7 group-hover:invert group-hover:scale-110 transition-all duration-300 grid place-items-center"> */}
+            <span className="group-hover:invert group-hover:scale-110 transition-all duration-300">
               {social.icon}
             </span>
+            {/* </
+            span> */}
           </Button>
         </div>
       ))}

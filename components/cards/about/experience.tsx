@@ -14,12 +14,9 @@ export default function ExperienceCard() {
             date={ex.date}
             title={ex.title}
             subTitle={ex.subTitle}
-            link={ex.link}
             tag={ex.tag}
           />
         ))}
-
-        <span>b</span>
       </Timeline>
     </Card>
   )

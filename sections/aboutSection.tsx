@@ -3,6 +3,7 @@ import EducationCard from "@/components/cards/about/educationCard"
 import ExperienceCard from "@/components/cards/about/experience"
 import MeCard from "@/components/cards/about/me"
 import ResumeCard from "@/components/cards/about/resume"
+import SoftSkillsCard from "@/components/cards/about/softSkillsCard"
 import StackCard from "@/components/cards/about/stackCard"
 import Heading from "@/components/heading/heading"
 import Card from "@/components/ui/card"
@@ -36,10 +37,9 @@ export default function AboutSection() {
 
           {/* Additional Info (Soft Skills and Rotaract Journey) */}
           <div className="space-y-4 ">
-            <Card title="Soft Skills">Soft Skills</Card>{" "}
+            {/* <Card title="Soft Skills">Soft Skills</Card>{" "} */}
+            <SoftSkillsCard />
             {/* Eighth: Soft skills */}
-            <Card title="Rotaract Journey">Rotaract Journey</Card>{" "}
-            {/* Ninth: Rotaract journey */}
           </div>
         </div>
       </div>
