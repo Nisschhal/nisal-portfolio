@@ -12,22 +12,24 @@ export default function ExpandableFeatured() {
     setActiveCard(null)
   }
   return (
-    <div className="w-full grid lg:flex lg:justify-between lg:gap-x-4">
+    <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {featuredData.slice(1).map((featured, i) => (
         <div
           key={i}
           className={cn(
-            "relative h-[640px] lg:w-1/3 transition-all origin-center duration-300 ease-in-out ",
-            activeCard === i ? "lg:w-[40%]" : "lg:w-[33%]"
+            "relative h-[640px] transition-all origin-center duration-300 ease-in-out "
+            // activeCard === i ? "lg:w-[99%]" : "lg:w-[91%]"
           )}
           onMouseEnter={() => handleActiveCard(i)}
           onMouseLeave={() => resetActiveCard()}
         >
           <FeaturedCard
+            link={featured.link}
             active={i === activeCard}
             title={featured.title}
             tag={featured.tag}
-            video={featured.video}
+            // video={featured.video}
+            image={featured.image}
           />
         </div>
       ))}

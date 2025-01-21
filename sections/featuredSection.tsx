@@ -3,6 +3,7 @@ import Heading from "@/components/heading/heading"
 import React from "react"
 import { featuredData } from "@/data"
 import ExpandableFeatured from "@/components/cards/featured/expandable-card"
+import Carhive from "@/public/assets/images/projects/carhive.png"
 
 const MainFeature = featuredData[0]
 
@@ -13,10 +14,13 @@ export default function FeaturedSection() {
       <Heading number="01" title_1="Featured" title_2="Work" />
       {/* Feature Cards */}
       <FeaturedCard
+        link="https://nischal-sage-dev-craft-dark.vercel.app"
         title={MainFeature.title}
         tag={MainFeature.tag}
-        video={MainFeature.video}
+        image={Carhive.src}
+        // video={MainFeature.video}
         active={true}
+        featured={true}
       />
       {/* Other Cards */}
       <div id="projects" className="mt-24">
