@@ -18,6 +18,10 @@ import MaterialUiImg from "@/public/assets/images/stack/materialui.png"
 import MySqlImg from "@/public/assets/images/stack/mysql.png"
 import PostgreSqlImg from "@/public/assets/images/stack/postgresql.png"
 import MongoDBImg from "@/public/assets/images/stack/mongodb.png"
+import JavaImg from "@/public/assets/images/stack/java.png"
+import SpringBootImg from "@/public/assets/images/stack/springboot.png"
+import BootstrapImg from "@/public/assets/images/stack/bootstrap.png"
+import PythonImg from "@/public/assets/images/stack/python.png"
 
 const stackData = [
   {
@@ -58,14 +62,9 @@ const stackData = [
         image: ReactJsImg,
         bgColor: "",
       },
-      {
-        id: 1,
-        title: "Next js",
-        image: NextJsImg,
-        bgColor: "",
-      },
     ],
   },
+
   {
     title: "Styling / FWs",
     stack: [
@@ -160,6 +159,52 @@ const stackData = [
         title: "GitHub",
         image: GithubImg,
         bgColor: "", // Official GitHub background color (dark theme)
+      },
+    ],
+  },
+  {
+    title: "Full Stack FWs",
+    stack: [
+      {
+        id: 1,
+        title: "Next js",
+        image: NextJsImg,
+        bgColor: "",
+      },
+    ],
+  },
+  {
+    title: "Also, Familiar with",
+    stack: [
+      {
+        id: 1,
+        title: "Python",
+        image: PythonImg,
+        bgColor: "",
+      },
+      {
+        id: 2,
+        title: "Java",
+        image: JavaImg,
+        bgColor: "",
+      },
+      {
+        id: 3,
+        title: "Spring boot",
+        image: SpringBootImg,
+        bgColor: "",
+      },
+      {
+        id: 4,
+        title: "Bootstrap",
+        image: BootstrapImg,
+        bgColor: "",
+      },
+      {
+        id: 5,
+        title: "Material UI",
+        image: MaterialUiImg,
+        bgColor: "",
       },
     ],
   },
