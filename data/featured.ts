@@ -4,11 +4,11 @@ import TailSprout from "@/public/assets/images/projects/tailsprout.png"
 import Sage from "@/public/assets/images/projects/sage-dev-craft.png"
 import SageDark from "@/public/assets/images/projects/sage-dev-craft-dark.png"
 import NextAuth from "@/public/assets/images/projects/next-auth.png"
+import InkSprout from "@/public/assets/images/projects/ink-sprout.png"
 import { StaticImageData } from "next/image"
 interface Featured {
   title: string
   tag: string
-  video: string
   credits: string
   image: string
   link: string
@@ -16,11 +16,16 @@ interface Featured {
 
 const featuredData: Featured[] = [
   {
+    title: "Ink Sprout",
+    tag: "Oct 14 2024",
+    image: InkSprout.src,
+    credits: "Nischal Puri",
+    link: "https://ink-sprout-v2-nischal.vercel.app",
+  },
+  {
     title: "Car Hive",
     tag: "Oct 14 2024",
     image: Carhive.src,
-    video:
-      "https://cdn.dribbble.com/userupload/12878467/file/original-ed8b35e23f89e36d2aaaab37fc965808.mp4",
     credits: "Nischal Puri",
     link: "https://carhive-dev-nischal.vercel.app",
   },
@@ -28,8 +33,6 @@ const featuredData: Featured[] = [
     title: "Sole Mate",
     image: Solemate.src,
     tag: "Nov 9 2024",
-    video:
-      "https://cdn.dribbble.com/userupload/12878467/file/original-ed8b35e23f89e36d2aaaab37fc965808.mp4",
     credits: "Nischal Puri",
     link: "https://sole-mate-dev-nisal.vercel.app",
   },
@@ -37,8 +40,6 @@ const featuredData: Featured[] = [
     title: "Tail Sprout",
     image: TailSprout.src,
     tag: "Jan 1 2025",
-    video:
-      "https://cdn.dribbble.com/userupload/12878467/file/original-ed8b35e23f89e36d2aaaab37fc965808.mp4",
     credits: "Nischal Puri",
     link: "https://tail-sprout-nisal-dev.vercel.app",
   },
@@ -46,8 +47,6 @@ const featuredData: Featured[] = [
     title: "Next Auth",
     tag: "Jan 11 2025",
     image: NextAuth.src,
-    video:
-      "https://cdn.dribbble.com/userupload/12878467/file/original-ed8b35e23f89e36d2aaaab37fc965808.mp4",
     credits: "Nischal Puri",
     link: "https://vercel.com/nisschhals-projects/next-auth-nisschal",
   },
@@ -55,8 +54,6 @@ const featuredData: Featured[] = [
     title: "Sage Dev Craft",
     image: Sage.src,
     tag: "Jan 15 2025",
-    video:
-      "https://cdn.dribbble.com/userupload/12878467/file/original-ed8b35e23f89e36d2aaaab37fc965808.mp4",
     credits: "Nischal Puri",
     link: "https://vercel.com/nisschhals-projects/sage-dev-craft",
   },
@@ -64,8 +61,6 @@ const featuredData: Featured[] = [
     title: "Sage Dev Craft Dark",
     image: SageDark.src,
     tag: "Jan 13 2025",
-    video:
-      "https://cdn.dribbble.com/userupload/12878467/file/original-ed8b35e23f89e36d2aaaab37fc965808.mp4",
     credits: "Nischal Puri",
     link: "https://nischal-sage-dev-craft-dark.vercel.app",
   },
