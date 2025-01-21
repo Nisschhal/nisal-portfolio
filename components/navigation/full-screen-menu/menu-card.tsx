@@ -21,10 +21,9 @@ export default function MenuCard({
       {/*Menu*/}
       <div className="z-40 w-full flex flex-col gap-y-[5px] justify-center items-start relative">
         {myLinks.map((link, i) => (
-          <span onClick={() => setOpen(!open)}>
+          <span onClick={() => setOpen(!open)} key={i}>
             <Link
               href={link.link}
-              key={i}
               className="text-[#fdf825] uppercase text-[52px] font-bold leading-[85%] transition-colors duration-75 hover:text-white"
             >
               {link.title}

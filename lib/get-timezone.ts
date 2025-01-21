@@ -17,6 +17,6 @@ export default async function getTimeZone({
       alert("Allow access location for accurate Time!📍")
     }
   } catch (error) {
-    console.log("Error while fetching timeZone!")
+    console.log("Error while fetching timeZone!", error)
   }
 }

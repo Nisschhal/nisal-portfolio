@@ -1,7 +1,5 @@
 import Card from "@/components/ui/card"
-import Image from "next/image"
 import React from "react"
-import me7 from "@/public/assets/gallery/me7.jpg"
 import { cn } from "@/lib/utils"
 
 export default function MeCard() {

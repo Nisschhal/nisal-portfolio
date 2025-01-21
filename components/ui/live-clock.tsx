@@ -1,11 +1,11 @@
 "use client"
-import getTimeZone from "@/lib/get-timezone"
+// import getTimeZone from "@/lib/get-timezone"
 import { FC, useEffect, useState } from "react"
 import moment from "moment-timezone"
 
 const LiveClock: FC = () => {
-  const [timeZone, setTimeZone] = useState<string>("")
-  const [error, setError] = useState<string>("Loading...")
+  // const [timeZone, setTimeZone] = useState<string>("")
+  // const [error, setError] = useState<string>("Loading...")
   const [time, setTime] = useState<string>("")
 
   // useEffect(() => {
@@ -61,6 +61,7 @@ const LiveClock: FC = () => {
 
     updateClock() // Initialize the clock immediately
     const intervalId = setInterval(updateClock, 1000)
+    return () => clearInterval(intervalId)
   }, [])
 
   return (

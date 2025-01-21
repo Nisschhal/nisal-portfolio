@@ -1,12 +1,12 @@
 import { cn } from "@/lib/utils"
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 
 export default function ToggleButton({
   open,
   setOpen,
 }: {
   open: boolean
-  setOpen: any
+  setOpen: (val: boolean) => void
 }) {
   const [clickCount, setClickCount] = useState<number>(0)
   const clicked = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {

@@ -1,8 +1,6 @@
 import Card from "@/components/ui/card"
 import { Timeline, TimelineItem } from "@/components/ui/timeline"
 import { experiencesDate } from "@/data"
-import React, { FC } from "react"
-import { FiArrowUpRight } from "react-icons/fi"
 
 export default function ExperienceCard() {
   return (

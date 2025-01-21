@@ -29,7 +29,6 @@ export const TimelineItem: FC<TimelineItemProps> = ({
   subTitle,
   link,
   tag,
-  isCourse,
 }) => {
   return (
     <div className="group flex flex-col sm:flex-row gap-6 min-h justify-start relative">

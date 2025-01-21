@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 import { StaticImport } from "next/dist/shared/lib/get-img-props"
 import Image from "next/image"
-import { act, useState } from "react"
+import { useState } from "react"
 
 interface TooltipProps {
   title: string

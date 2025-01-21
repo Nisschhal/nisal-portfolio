@@ -50,7 +50,6 @@ interface FeaturedCardProps {
   featured?: boolean
 }
 export const FeaturedCard: FC<FeaturedCardProps> = ({
-  logo,
   title,
   tag,
   image,
