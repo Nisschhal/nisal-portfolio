@@ -20,6 +20,9 @@ export default function AboutSection() {
           <MeCard /> {/* First priority: Personal information and photo */}
           <ResumeCard /> {/* Second: Resume */}
           <BackgroundCard /> {/* Third: Background */}
+          <div className=" md:block lg:hidden ">
+            <EducationCard classNames="h-full" /> {/* Sixth: Education */}
+          </div>
         </div>
 
         {/* Professional Sections (Experience, Education, and Tech Stack) */}
@@ -27,19 +30,26 @@ export default function AboutSection() {
           <div className="space-y-4">
             <StackCard /> {/* Fourth: Your tech stack */}
             <ExperienceCard /> {/* Fifth: Work experience */}
-            <EducationCard /> {/* Sixth: Education */}
           </div>
 
           {/* Gallery Section (Optional but adds visual appeal) */}
           <div className="space-y-4 2xl:hidden">
             <Gallery /> {/* Seventh: Visual work or projects */}
+            <div className=" md:block lg:hidden">
+              <SoftSkillsCard />
+            </div>{" "}
           </div>
 
           {/* Additional Info (Soft Skills and Rotaract Journey) */}
           <div className="space-y-4 ">
             {/* <Card title="Soft Skills">Soft Skills</Card>{" "} */}
-            <SoftSkillsCard />
+            <div className="block md:hidden lg:block">
+              <SoftSkillsCard />
+            </div>{" "}
             {/* Eighth: Soft skills */}
+            <div className="hidden lg:block ">
+              <EducationCard /> {/* Sixth: Education */}
+            </div>
           </div>
         </div>
       </div>

@@ -6,33 +6,24 @@ import { cn } from "@/lib/utils"
 
 export default function MeCard() {
   return (
-    <Card classNames="2xl:h-full">
-      <div className="w-full h-[400px] sm:h-[500px] overflow-hidden">
-        {/* Background Image */}
-        <Image
-          src={me7}
-          alt="nischal puri"
-          className="absolute top-0 letf-0 bottom-0 right-0 h-full w-full object-cover"
+    <Card classNames="h-full bg-cover bg-center bg-no-repeat bg-[url('/assets/gallery/me7.jpg')]">
+      <div className="absolute top-[3%] space-y-2">
+        <Tag
+          text="Hello, world 👋 !"
+          className="rounded-tl-md  hover:scale-105 duration-300 "
         />
-        {/* Tags */}
-        <div className="absolute top-[65%] space-y-2">
-          <Tag
-            text="Hello, world :)"
-            className="rounded-tl-md  hover:scale-105 duration-300 "
-          />
-          <Tag
-            text="I'm Nischal Puri"
-            className="rounded-tl-md hover:scale-105 duration-300  "
-          />
-          <Tag
-            text="Full Stack Developer"
-            className="rounded-tl-md hover:scale-105 duration-300  "
-          />
-          <Tag
-            text="Software Essentialists"
-            className="rounded-tl-md hover:scale-105 duration-300  "
-          />
-        </div>
+        <Tag
+          text="I'm Nischal Puri"
+          className="rounded-tl-md hover:scale-105 duration-300  "
+        />
+        <Tag
+          text="Full Stack Developer 💻"
+          className="rounded-tl-md hover:scale-105 duration-300  "
+        />
+        <Tag
+          text="Tech Innovator ⚙🔧"
+          className="rounded-tl-md hover:scale-105 duration-300  "
+        />
       </div>
     </Card>
   )

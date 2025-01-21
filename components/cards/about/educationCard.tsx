@@ -3,9 +3,9 @@ import { Timeline, TimelineItem } from "@/components/ui/timeline"
 import educationData from "@/data/educationData"
 import React from "react"
 
-export default function EducationCard() {
+export default function EducationCard({ classNames }: { classNames?: string }) {
   return (
-    <Card title="My Education">
+    <Card title="My Education" classNames={classNames}>
       <Timeline>
         {educationData.map((ed, i) => (
           <TimelineItem
