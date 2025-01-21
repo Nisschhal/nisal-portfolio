@@ -12,15 +12,17 @@ import React from "react"
 
 export default function AboutSection() {
   return (
-    <div className="pt-24 px-3 lg:px-8">
+    <section id="about" className="pt-24 px-3 lg:px-8">
       <Heading number={"02"} title_1={"About"} title_2={"Me"} />
       <div className="space-y-4 py-8">
         {/* Personal Info || Resume || Background */}
         <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 2xl:grid-cols-4">
           <MeCard /> {/* First priority: Personal information and photo */}
           <ResumeCard /> {/* Second: Resume */}
-          <BackgroundCard /> {/* Third: Background */}
-          <div className=" md:block lg:hidden ">
+          <div id="background">
+            <BackgroundCard /> {/* Third: Background */}
+          </div>
+          <div id="education" className=" md:block lg:hidden ">
             <EducationCard classNames="h-full" /> {/* Sixth: Education */}
           </div>
         </div>
@@ -28,13 +30,19 @@ export default function AboutSection() {
         {/* Professional Sections (Experience, Education, and Tech Stack) */}
         <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 2xl:grid-cols-4">
           <div className="space-y-4">
-            <StackCard /> {/* Fourth: Your tech stack */}
-            <ExperienceCard /> {/* Fifth: Work experience */}
+            <div id="tech">
+              <StackCard /> {/* Fourth: Your tech stack */}
+            </div>
+            <div id="experience">
+              <ExperienceCard /> {/* Fifth: Work experience */}
+            </div>
           </div>
 
           {/* Gallery Section (Optional but adds visual appeal) */}
           <div className="space-y-4 2xl:hidden">
-            <Gallery /> {/* Seventh: Visual work or projects */}
+            <div id="gallery">
+              <Gallery /> {/* Seventh: Visual work or projects */}
+            </div>
             <div className=" md:block lg:hidden">
               <SoftSkillsCard />
             </div>{" "}
@@ -47,12 +55,12 @@ export default function AboutSection() {
               <SoftSkillsCard />
             </div>{" "}
             {/* Eighth: Soft skills */}
-            <div className="hidden lg:block ">
+            <div id="education" className="hidden lg:block ">
               <EducationCard /> {/* Sixth: Education */}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

@@ -2,7 +2,13 @@ import { HeadingAnimatedSvg } from "@/components/heading/heading-animated-svg"
 import Image from "next/image"
 import Link from "next/link"
 import ShadeImg from "@/public/assets/images/background/card-shade.png"
-export default function MenuCard() {
+export default function MenuCard({
+  open,
+  setOpen,
+}: {
+  open: boolean
+  setOpen: (val: boolean) => void
+}) {
   return (
     <div className="w-full h-auto min-h-[427px] gap-[70px] bg-[#1e36ea] rounded-[10px] flex-col justify-between  flex relative overflow-hidden pt-10 px-[25px] pb-5 shadow-md">
       {/*Header*/}
@@ -15,13 +21,15 @@ export default function MenuCard() {
       {/*Menu*/}
       <div className="z-40 w-full flex flex-col gap-y-[5px] justify-center items-start relative">
         {myLinks.map((link, i) => (
-          <Link
-            key={i}
-            href={link.link}
-            className="text-[#fdf825] uppercase text-[52px] font-bold leading-[85%] transition-colors duration-75 hover:text-white"
-          >
-            {link.title}
-          </Link>
+          <span onClick={() => setOpen(!open)}>
+            <Link
+              href={link.link}
+              key={i}
+              className="text-[#fdf825] uppercase text-[52px] font-bold leading-[85%] transition-colors duration-75 hover:text-white"
+            >
+              {link.title}
+            </Link>
+          </span>
         ))}
       </div>
       {/*Image shade*/}
@@ -41,27 +49,24 @@ const myLinks = [
   },
   {
     title: "Background",
-    link: "#about",
+    link: "#background",
   },
 
   {
     title: "EXPERIENCE",
-    link: "#about",
+    link: "#experience",
   },
   {
     title: "EDUCATION",
-    link: "#about",
+    link: "#education",
   },
-  {
-    title: "CERTIFICATIONS",
-    link: "#about",
-  },
+
   {
     title: "TECH STACK",
-    link: "#about",
+    link: "#tech",
   },
   {
     title: "Gallery",
-    link: "#about",
+    link: "#gallery",
   },
 ]

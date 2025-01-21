@@ -33,9 +33,9 @@ const ContactCard: React.FC<ContactCardProps> = ({
         <div className="z-20 flex flex-col gap-8 justify-between items-start">
           {/* Header */}
           <div className="flex items-center gap-x-2">
-            <span className="bg-white w-8 h-8 rounded-lg grid place-items-center">
+            <div className="bg-white w-8 h-8 rounded-lg grid place-items-center">
               {icon}
-            </span>
+            </div>
             <h1>{title}</h1>
           </div>
           {/* Body Text */}

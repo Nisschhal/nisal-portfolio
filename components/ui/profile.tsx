@@ -119,7 +119,7 @@ export default function Profile({ tl }: { tl: gsap.core.Timeline }) {
           ref={subtitleRef}
           className="opacity-50 text-sm absolute top-[25px]" // Position below the logo
         >
-          <span className="text-lg font-thin">(</span>Software Essentialists
+          <span className="text-lg font-thin">(</span>Software Developer
           <span className="text-lg font-thin">)</span>
         </p>
       </div>

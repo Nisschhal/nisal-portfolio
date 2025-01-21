@@ -3,7 +3,7 @@ import { FC, ReactNode, useEffect } from "react"
 interface ButtonProps {
   text: string
   icon: ReactNode
-  tl: gsap.core.Timeline
+  tl?: gsap.core.Timeline
 }
 
 const FancyButton: FC<ButtonProps> = ({ text, icon, tl }) => {

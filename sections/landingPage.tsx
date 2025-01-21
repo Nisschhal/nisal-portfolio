@@ -32,7 +32,7 @@ const LandingSection = ({ tl }: { tl: gsap.core.Timeline }) => {
 
       <div className="cta absolute bottom-36 left-10 z-20 md:hidden">
         <MagneticWrapper>
-          <FancyButton tl={tl} text="Let's talk" icon={<FaArrowRight />} />
+          <FancyButton text="Let's talk" icon={<FaArrowRight />} />
         </MagneticWrapper>
       </div>
       {/* Button for mobile */}

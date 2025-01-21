@@ -48,7 +48,7 @@ export default function ContactSetion() {
       )
   }
   return (
-    <div className="pt-24 px-3 lg:px-8">
+    <section id="contact" className="pt-24 px-3 lg:px-8">
       <Heading number="03" title_1="Contact" title_2="Me" />
 
       <Card>
@@ -202,7 +202,7 @@ export default function ContactSetion() {
           </form>
         </div>
       </Card>
-    </div>
+    </section>
   )
 }
 

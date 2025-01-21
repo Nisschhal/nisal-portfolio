@@ -9,20 +9,18 @@ export default function ToggleButton({
   setOpen: any
 }) {
   const [clickCount, setClickCount] = useState<number>(0)
-  const clicked = () => {
+  const clicked = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault()
+    console.log("'cickedd")
     if (clickCount === 0) {
       setClickCount(1)
     }
+    setOpen(!open)
   }
 
   return (
     <button
-      onClick={() => {
-        setOpen((prev: any) => !prev)
-        if (clickCount === 0) {
-          setClickCount(1)
-        }
-      }}
+      onClick={(e) => clicked(e)}
       className={cn(
         "fixed right-4  m-5 z-50 w-16 h-16 rounded-full bg-[#323E56] cursor-pointer transform scale-[0.5]  hover:scale-100 transition-transform duration-300",
         clickCount === 0 && "animate-pulse"

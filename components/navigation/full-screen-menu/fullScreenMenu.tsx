@@ -7,7 +7,15 @@ import { AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import MenuCard from "./menu-card"
 
-export default function FullScreenMenu() {
+export default function FullScreenMenu({
+  tl,
+  setOpen,
+  open,
+}: {
+  open: boolean
+  setOpen: (val: boolean) => void
+  tl: gsap.core.Timeline
+}) {
   return (
     <motion.div
       variants={menuSlide}
@@ -19,7 +27,7 @@ export default function FullScreenMenu() {
       {/* -------- Profile -------------  */}
       <div className="relative w-full pl-[5%]">
         <div className="absolute top-8">
-          <Profile />
+          <Profile tl={tl} />
         </div>
       </div>
       {/* -------- Menu card -------------  */}
@@ -34,14 +42,16 @@ export default function FullScreenMenu() {
           <div className="pl-4 flex flex-col justify-end">
             <AnimatePresence>
               {navItems.map((navItem, index) => (
-                <NavLink key={index} item={{ ...navItem, index }} />
+                <div key={index} onClick={() => setOpen(!open)}>
+                  <NavLink item={{ ...navItem, index }} />
+                </div>
               ))}
             </AnimatePresence>
           </div>
 
           {/* Row: 2nd: 500px */}
           {/* Menu About Card */}
-          <MenuCard />
+          <MenuCard open={open} setOpen={setOpen} />
         </div>
       </div>
       {/*Curve svg effect*/}

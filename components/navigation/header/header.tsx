@@ -34,12 +34,12 @@ export default function Header({ tl }: { tl: gsap.core.Timeline }) {
       <Profile tl={tl} />
       <div className="hidden md:inline  ">
         <MagneticWrapper>
-          <FancyButton text={"Let's talk"} icon={<FaArrowRight />} />
+          <FancyButton tl={tl} text={"Let's talk"} icon={<FaArrowRight />} />
         </MagneticWrapper>
       </div>
       {showToggle && <ToggleButton open={open} setOpen={setOpen} />}
       <AnimatePresence mode="wait">
-        {open && <FullScreenMenu />}
+        {open && <FullScreenMenu open={open} setOpen={setOpen} tl={tl} />}
       </AnimatePresence>
     </div>
   )
