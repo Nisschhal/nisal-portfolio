@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 
 export default function MeCard() {
   return (
-    <Card classNames="h-full bg-cover bg-center bg-no-repeat bg-[url('/assets/gallery/me7.jpg')]">
+    <Card classNames="h-[500px] md:h-full bg-cover bg-center bg-no-repeat bg-[url('/assets/gallery/me7.jpg')]">
       <div className="absolute top-[3%] space-y-2">
         <Tag
           text="Hello, world 👋 !"

@@ -67,13 +67,28 @@ export default function FullScreenMenu({
           </div>
           {/* Middle */}
           <div className="flex items-center gap-4">
-            <Link href={"/"}>LinkedIn</Link>
-            <Link href={"/"}>Facebook</Link>
-            <Link href={"/"}>Instagram</Link>
+            <Link
+              target="_blank"
+              href={"https://www.linkedin.com/in/nischal-puri-a9041a165/"}
+            >
+              LinkedIn
+            </Link>
+            <Link
+              target="_blank"
+              href={"https://www.facebook.com/Mrnischalpuri"}
+            >
+              Facebook
+            </Link>
+            <Link
+              target="_blank"
+              href={"https://www.instagram.com/mrnischalpuri/"}
+            >
+              Instagram
+            </Link>
           </div>
           {/* Right Side */}
           <div className="flex items-center gap-4">
-            <Link href={"/"}>©2024</Link>
+            <Link href={"/"}>©2025 | Nischal Puri</Link>
           </div>
         </div>
       </div>
