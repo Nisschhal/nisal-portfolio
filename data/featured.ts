@@ -17,7 +17,7 @@ interface Featured {
 const featuredData: Featured[] = [
   {
     title: "Ink Sprout",
-    tag: "Oct 14 2024",
+    tag: "Jan 22 2025",
     image: InkSprout.src,
     credits: "Nischal Puri",
     link: "https://ink-sprout-v2-nischal.vercel.app",
