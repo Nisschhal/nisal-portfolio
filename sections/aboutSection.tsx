@@ -6,7 +6,6 @@ import ResumeCard from "@/components/cards/about/resume"
 import SoftSkillsCard from "@/components/cards/about/softSkillsCard"
 import StackCard from "@/components/cards/about/stackCard"
 import Heading from "@/components/heading/heading"
-import Card from "@/components/ui/card"
 import Gallery from "@/components/ui/gallery"
 import React from "react"
 
@@ -43,7 +42,7 @@ export default function AboutSection() {
             <div id="gallery">
               <Gallery /> {/* Seventh: Visual work or projects */}
             </div>
-            <div className=" md:block lg:hidden">
+            <div className="hidden md:block lg:hidden">
               <SoftSkillsCard />
             </div>{" "}
           </div>
