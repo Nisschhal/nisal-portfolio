@@ -30,17 +30,17 @@ export default function Socials() {
 const socials = [
   {
     icon: <FaFacebookF className="w-4 h-4" />,
-    link: "www.facebook.com/",
+    link: "https://www.facebook.com/Mrnischalpuri",
     username: "Nischal Puri",
   },
   {
     icon: <BsInstagram className="w-4 h-4" />,
-    link: "www.instagram.com/",
+    link: "https://www.instagram.com/mrnischalpuri/",
     username: "Nischal Puri",
   },
   {
     icon: <LiaLinkedinIn className="w-4 h-4" />,
-    link: "www.linkedin.com/",
+    link: "https://www.linkedin.com/in/nischal-puri-a9041a165/",
     username: "Nischal Puri",
   },
 ]

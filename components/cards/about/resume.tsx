@@ -1,9 +1,9 @@
 import Button from "@/components/ui/button"
 import Card from "@/components/ui/card"
 import Socials from "@/components/ui/socials"
+import Link from "next/link"
 import React from "react"
 import { FaDownload } from "react-icons/fa"
-
 export default function ResumeCard() {
   return (
     <Card classNames="md:h-full 2xl:h-fit" title="Experiences">
@@ -34,18 +34,22 @@ export default function ResumeCard() {
         {/* <Image src={} alt="nischal puri signature" /> */}
       </div>
       {/* Socials and Resume download btn */}
-      <div className="flex items-center justify-between md:absolute md:bottom-6 md:left-6 md:w-[calc(100%-48px)]">
+      <div className="flex items-center justify-between md:absolute md:bottom-2 lg:bottom-6 md:left-6 md:w-[calc(100%-48px)]">
         {/* <div className="flex items-center justify-between "> */}
         {/* Socials */}
         <Socials />
-        <div className="group duration-300">
+        <Link
+          target="_blank"
+          href="./Nischal_Resume.pdf"
+          className="group duration-300"
+        >
           <Button classNames="group-hover:bg-white transition-bg duration-300">
             <div className="flex gap-2 group-hover:invert transition-all dur">
               <FaDownload />
               Resume
             </div>
           </Button>
-        </div>
+        </Link>
       </div>
     </Card>
   )
