@@ -33,13 +33,13 @@ import gsap from "gsap"
 import Image from "next/image"
 import me15 from "@/public/assets/gallery/me15.jpg"
 
-export default function Profile({ tl }: { tl: gsap.core.Timeline }) {
+export default function Profile({ tl }: { tl?: gsap.core.Timeline }) {
   const nameRef = useRef<HTMLParagraphElement>(null) // Ref for the name element
   const imgContainerRef = useRef<HTMLDivElement>(null) // Ref for the image container
   const subtitleRef = useRef<HTMLParagraphElement>(null) // Ref for the swinging text
 
   useEffect(() => {
-    // const tl = gsap.timeline({ defaults: { duration: 0.75 } })
+    if (!tl) return // Exit early if `tl` is not provided
 
     // Image animation
     if (imgContainerRef.current) {
@@ -88,7 +88,7 @@ export default function Profile({ tl }: { tl: gsap.core.Timeline }) {
         }
       )
     }
-  }, [])
+  }, [tl]) // Only re-run the effect when `tl` changes
 
   return (
     <div className="flex items-center gap-x-2 transition-colors duration-75 text-primary-foreground">

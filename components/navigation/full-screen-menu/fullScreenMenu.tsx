@@ -85,6 +85,12 @@ export default function FullScreenMenu({
             >
               Instagram
             </Link>
+            <Link
+              target="_blank"
+              href={"https://www.instagram.com/mrnischalpuri/"}
+            >
+              Instagram
+            </Link>
           </div>
           {/* Right Side */}
           <div className="flex items-center gap-4">
