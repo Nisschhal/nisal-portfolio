@@ -1,6 +1,6 @@
 const educationData = [
   {
-    date: "2023-Now",
+    date: "2024-Now",
     title: "Self-Education",
     subTitle: "Continuous learning and growing",
     link: "/",
