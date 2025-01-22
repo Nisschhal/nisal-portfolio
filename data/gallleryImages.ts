@@ -8,7 +8,6 @@ import me7 from "../public/assets/gallery/me7.jpg"
 import me8 from "../public/assets/gallery/me8.jpg"
 import me9 from "../public/assets/gallery/me9.jpg"
 import me10 from "../public/assets/gallery/me10.jpg"
-import me13 from "../public/assets/gallery/me13.jpg"
 import me15 from "../public/assets/gallery/me15.jpg"
 import me16 from "../public/assets/gallery/me16.jpg"
 import me17 from "../public/assets/gallery/me17.jpg"
@@ -57,11 +56,6 @@ const galleryImages = [
   {
     id: 10,
     img: me10,
-  },
-
-  {
-    id: 13,
-    img: me13,
   },
 
   {
