@@ -5,7 +5,8 @@ import Sage from "@/public/assets/images/projects/sage-dev-craft.png"
 import SageDark from "@/public/assets/images/projects/sage-dev-craft-dark.png"
 import NextAuth from "@/public/assets/images/projects/next-auth.png"
 import InkSprout from "@/public/assets/images/projects/ink-sprout.png"
-import { StaticImageData } from "next/image"
+import BookWiz from "@/public/assets/images/projects/bookwiz.png"
+
 interface Featured {
   title: string
   tag: string
@@ -16,12 +17,20 @@ interface Featured {
 
 const featuredData: Featured[] = [
   {
+    title: "Book Wiz",
+    image: BookWiz.src,
+    tag: "Jan 25 2025",
+    credits: "Nischal Puri",
+    link: "https://uni-book-wiz.vercel.app",
+  },
+  {
     title: "Ink Sprout",
     tag: "Jan 22 2025",
     image: InkSprout.src,
     credits: "Nischal Puri",
     link: "https://ink-sprout-v2-nischal.vercel.app",
   },
+
   {
     title: "Car Hive",
     tag: "Oct 14 2024",
@@ -36,6 +45,7 @@ const featuredData: Featured[] = [
     credits: "Nischal Puri",
     link: "https://sole-mate-dev-nisal.vercel.app",
   },
+
   {
     title: "Tail Sprout",
     image: TailSprout.src,
