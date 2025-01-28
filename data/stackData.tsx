@@ -22,6 +22,7 @@ import JavaImg from "@/public/assets/images/stack/java.png"
 import SpringBootImg from "@/public/assets/images/stack/springboot.png"
 import BootstrapImg from "@/public/assets/images/stack/bootstrap.png"
 import PythonImg from "@/public/assets/images/stack/python.png"
+import JestImg from "@/public/assets/images/stack/Jest.png"
 
 const stackData = [
   {
@@ -60,6 +61,17 @@ const stackData = [
         id: 0,
         title: "React js",
         image: ReactJsImg,
+        bgColor: "",
+      },
+    ],
+  },
+  {
+    title: "Testing Library",
+    stack: [
+      {
+        id: 0,
+        title: "React Library with Jest",
+        image: JestImg,
         bgColor: "",
       },
     ],

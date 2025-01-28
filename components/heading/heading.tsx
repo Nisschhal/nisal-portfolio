@@ -20,9 +20,9 @@ const Heading: FC<HeadingProps> = ({ number, title_1, title_2 }) => {
         </h2>
       </div>
       {/* Heading text wrapper */}
-      <div className="flex items-center flex-nonwrap min-h-min overflow-hidden p-0 w-full font-oswald">
+      <div className="flex items-center flex-nonwrap min-h-min overflow-hidden p-0 w-full font-oswald mb-2">
         {/* Title 1: Featured */}
-        <p className="text-[17vw] lg:text-[12vw] leading-[100%] text-primary-foreground mr-3">
+        <p className="  text-[12vw] leading-[100%] text-primary-foreground mr-3">
           {title_1}
         </p>
         <HeadingAnimatedSvg
@@ -33,7 +33,7 @@ const Heading: FC<HeadingProps> = ({ number, title_1, title_2 }) => {
           }`}
         />
         {/* Title 2: Work (italic)*/}
-        <p className="text-[17vw] lg:text-[12vw] leading-[100%] text-primary-foreground mr-3 italic">
+        <p className="text-[12vw] leading-[100%] text-primary-foreground mr-3 italic">
           {title_2}
         </p>
       </div>

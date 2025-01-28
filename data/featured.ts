@@ -17,18 +17,18 @@ interface Featured {
 
 const featuredData: Featured[] = [
   {
-    title: "Book Wiz",
-    image: BookWiz.src,
-    tag: "Jan 25 2025",
-    credits: "Nischal Puri",
-    link: "https://uni-book-wiz.vercel.app",
-  },
-  {
     title: "Ink Sprout",
     tag: "Jan 22 2025",
     image: InkSprout.src,
     credits: "Nischal Puri",
     link: "https://ink-sprout-v2-nischal.vercel.app",
+  },
+  {
+    title: "Book Wiz (Library)",
+    image: BookWiz.src,
+    tag: "Jan 25 2025",
+    credits: "Nischal Puri",
+    link: "https://uni-book-wiz.vercel.app",
   },
 
   {

@@ -110,17 +110,17 @@ export default function Profile({ tl }: { tl?: gsap.core.Timeline }) {
       <div className="relative">
         <p
           ref={nameRef}
-          className="text-3xl font-medium" // Reference for animation
+          className="sm:text-3xl font-medium" // Reference for animation
         >
           NISCHAL PURI
         </p>
         {/* Swinging Subtitle */}
         <p
           ref={subtitleRef}
-          className="opacity-50 text-sm absolute top-[25px]" // Position below the logo
+          className="opacity-50 text-xs sm:text-sm absolute top-[25px]" // Position below the logo
         >
-          <span className="text-lg font-thin">(</span>Software Developer
-          <span className="text-lg font-thin">)</span>
+          <span className=" font-thin">(</span>Software Developer
+          <span className=" font-thin">)</span>
         </p>
       </div>
     </div>

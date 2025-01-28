@@ -10,7 +10,7 @@ const FeaturedHeader: FC<HeaderProps> = ({ title, tag }) => {
     <div className="bg-secondary-background flex flex-none flex-nowrap relative p-6 w-full items-center justify-between h-16 border-border rounded-2xl">
       {/* Title */}
       <div>
-        <p className="text-lg font-medium leading-3 text-primary-foreground">
+        <p className=" text-lg font-medium leading-3 text-primary-foreground">
           {title}
         </p>
       </div>

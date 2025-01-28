@@ -46,7 +46,7 @@ const LandingSection = ({ tl }: { tl: gsap.core.Timeline }) => {
         <LiveClock />
       </div>
       {/* Slogan */}
-      <div className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-20 leading-[12vw] md:leading-[11.5vw] lg:leading-[10vw] 2xl:leading-[9rem] font-medium h-[40rem] tracking-[-0.3rem]">
+      <div className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-28 leading-[12vw] md:leading-[11.5vw] lg:leading-[10vw] 2xl:leading-[9rem] font-medium h-[40rem] tracking-[-0.3rem]">
         <div className="flex flex-col justify-center items-center text-primary-foreground text-[16vw] lg:text-[14vw] 2xl:text-[12rem] uppercase">
           <div>
             <span className="slog1">Simple</span>
@@ -56,7 +56,7 @@ const LandingSection = ({ tl }: { tl: gsap.core.Timeline }) => {
           </div>
           <div className="relative">
             <span className="slog3">Impactful</span>
-            <div className="text-[1rem] leading-[1.4rem] tracking-[-0.05rem] absolute top-[14vw] lg:top-[11vw]  2xl:top-[9rem] left-0 2xl:left-[57rem] w-[30rem] uppercase font-normal  ">
+            <div className="text-[12px] md:text-[1rem] leading-[.9rem] md:leading-[1.4rem] tracking-[-0.05rem] absolute top-[14vw] lg:top-[11vw]  2xl:top-[9rem] left-0 2xl:left-[57rem] w-[20rem] md:w-[30rem] uppercase font-normal  ">
               <span className="sub-slog">
                 Crafting clean and purposeful solutions
               </span>
