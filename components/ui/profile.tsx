@@ -117,7 +117,7 @@ export default function Profile({ tl }: { tl?: gsap.core.Timeline }) {
         {/* Swinging Subtitle */}
         <p
           ref={subtitleRef}
-          className="opacity-50 text-sm absolute top-[25px] border" // Position below the logo
+          className="opacity-50 text-sm absolute top-[25px] " // Position below the logo
         >
           <span className="sm:text-lg font-thin">(</span>Software Developer
           <span className="sm:text-lg font-thin">)</span>
