@@ -2,19 +2,19 @@ const experiencesDate = [
   {
     date: "2024–Present",
     title: "Full Stack Developer & Team Lead",
-    subTitle: "Neutorline Pvt. Ltd. (Sister Company of Neutrosys.net, USA)",
+    subTitle: "Neutorline Pvt. Ltd.",
     link: "/",
     tag: "Web App Development | Team Leadership",
   },
   {
-    date: "2023",
+    date: "2023-2024",
     title: "Freelance & Personal Development",
     subTitle: "Worked on major projects like Ink Sprout, Book Wiz, and more",
     link: "/",
     tag: "Full Stack | UI/UX | API Integration",
   },
   {
-    date: "2021–2023",
+    date: "2022–2023",
     title: "Technical & IT Manager",
     subTitle: "Excellence Institution Center (EdTech Startup)",
     link: "/",
