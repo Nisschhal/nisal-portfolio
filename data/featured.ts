@@ -58,14 +58,14 @@ const featuredData: Featured[] = [
     tag: "Jan 11 2025",
     image: NextAuth.src,
     credits: "Nischal Puri",
-    link: "https://vercel.com/nisschhals-projects/next-auth-nisschal",
+    link: "https://next-auth-nisschal.vercel.app",
   },
   {
     title: "Sage Dev Craft",
     image: Sage.src,
     tag: "Jan 15 2025",
     credits: "Nischal Puri",
-    link: "https://vercel.com/nisschhals-projects/sage-dev-craft",
+    link: "https://sage-dev-craft.vercel.app",
   },
   {
     title: "Sage Dev Craft Dark",
