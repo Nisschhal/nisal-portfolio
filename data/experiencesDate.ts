@@ -1,4 +1,4 @@
-const experiencesData = [
+const experiencesDate = [
   {
     date: "2024–Present",
     title: "Full Stack Developer & Team Lead",
@@ -49,3 +49,5 @@ const experiencesData = [
     tag: "Community Engagement",
   },
 ]
+
+export default experiencesDate
